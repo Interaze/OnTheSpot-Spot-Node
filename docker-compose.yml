@@ -1,15 +1,6 @@
 version: '3'
 
 services:
-#  spot-stop:
-#    build:
-#      dockerfile: Dockerfile
-#      context: ./spot-follow
-#    environment:
-#      - GRPC_TRACE=all
-#      - GRPC_VERBOSITY=debug
-#    stdin_open: true # docker run -i
-#    tty: true # docker run -t
   spot-follow:
     build:
       dockerfile: Dockerfile
