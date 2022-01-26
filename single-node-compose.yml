@@ -6,8 +6,8 @@ services:
       dockerfile: Dockerfile
       context: ./spot-follow
     environment: #environment variable to be set on host machine specific to each spot
-      - SPOT_ACCOUNT
-      - SPOT_PASSWORD
-      - SPOT_IP
+      - SPOT_ACCOUNT=${SPOT_ACCOUNT}
+      - SPOT_PASSWORD=${SPOT_PASSWORD}
+      - SPOT_IP=${SPOT_IP}
     stdin_open: true # docker run -i
     tty: true # docker run -t
