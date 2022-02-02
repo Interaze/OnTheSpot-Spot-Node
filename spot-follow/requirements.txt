@@ -5,3 +5,5 @@ bosdyn-choreography-client==2.3.2
 six
 pyqt5
 windows-curses==2.1.0; sys_platform == 'win32'
+
+datadog
