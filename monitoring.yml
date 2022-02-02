@@ -3,8 +3,8 @@ version: '3'
 services:
   dd-agent:
     build: datadog
-    links:
-    - spot-follow # connect to spot-follow
+#    links:
+#    - spot-follow # connect to spot-follow
     environment:
     - DD_API_KEY=${DD_API_KEY}
     - DD_SITE=datadoghq.com
