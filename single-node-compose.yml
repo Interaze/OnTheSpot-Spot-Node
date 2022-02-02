@@ -11,14 +11,3 @@ services:
       - SPOT_IP=${SPOT_IP}
     stdin_open: true # docker run -i
     tty: true # docker run -t
-  dd-agent:
-    build: datadog
-    links:
-     - spot-follow # connect to spot-follow
-    environment:
-     - DD_API_KEY=${DD_API_KEY}
-     - DD_SITE="datadoghq.com"
-    volumes:
-     - /var/run/docker.sock:/var/run/docker.sock
-     - /proc/:/host/proc/:ro
-     - /sys/fs/cgroup:/host/sys/fs/cgroup:ro
