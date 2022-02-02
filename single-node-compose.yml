@@ -11,7 +11,7 @@ services:
       - SPOT_IP=${SPOT_IP}
     stdin_open: true # docker run -i
     tty: true # docker run -t
-  datadog:
+  dd-agent:
     build: datadog
     links:
      - spot-follow # connect to spot-follow
