@@ -17,6 +17,7 @@ services:
      - spot-follow # connect to spot-follow
     environment:
      - DD_API_KEY=${DD_API_KEY}
+     - DD_SITE="datadoghq.com"
     volumes:
      - /var/run/docker.sock:/var/run/docker.sock
      - /proc/:/host/proc/:ro
