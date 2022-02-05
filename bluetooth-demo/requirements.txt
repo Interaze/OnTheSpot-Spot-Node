@@ -1,0 +1,6 @@
+bosdyn-client==2.3.2
+bosdyn-mission==2.3.2
+bosdyn-choreography-client==2.3.2
+
+six
+pybluez
