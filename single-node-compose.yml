@@ -11,3 +11,4 @@ services:
       - SPOT_IP=${SPOT_IP}
     stdin_open: true # docker run -i
     tty: true # docker run -t
+    command: python manage.py runserver 0.0.0.0:8000
