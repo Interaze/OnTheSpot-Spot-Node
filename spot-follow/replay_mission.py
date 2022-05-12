@@ -107,6 +107,7 @@ def main(raw_args=None):
             mission_file, map_directory, args.hostname))
 
     # Initialize robot object
+    print("Initializing robot...")
     robot = init_robot(args.hostname)
 
     # Acquire robot lease
