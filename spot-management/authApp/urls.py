@@ -19,7 +19,6 @@ from django.urls import path, include
 from authApp.views import load_map, run_mission
 
 urlpatterns = [
-    path('run-mission/', load_map, name='Run-Mission'),
     #path('simple-upload/', simple_upload, name='Simple-Upload'),
     path('run-mission/', run_mission, name='Run-Mission'),
     #path('load-mission/', load_mission, name='Load-Mission'),
