@@ -9,6 +9,8 @@ services:
       - SPOT_ACCOUNT=${SPOT_ACCOUNT}
       - SPOT_PASSWORD=${SPOT_PASSWORD}
       - SPOT_IP=${SPOT_IP}
+    port:
+      - 8000:8000
     stdin_open: true # docker run -i
     tty: true # docker run -t
     command: python manage.py runserver 0.0.0.0:8000
