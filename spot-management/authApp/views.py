@@ -1,4 +1,5 @@
 import json
+import os
 from django.contrib.auth import authenticate, login
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import ensure_csrf_cookie
@@ -10,6 +11,8 @@ from django.core.files.storage import FileSystemStorage
 from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.response import Response
+
+import replay_mission
 
 from authApp.loadData import loadMap, loadMission
 
@@ -54,13 +57,7 @@ def load_mission(request):
 
     return JsonResponse(loadMission(missionPath))
 
-def simple_upload(request):
-    if request.method == 'POST' and request.FILES['myfile']:
-        myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        uploaded_file_url = fs.url(filename)
-        return render(request, 'core/simple_upload.html', {
-            'uploaded_file_url': uploaded_file_url
-        })
-    return render(request, 'core/simple_upload.html')
+def run_mission(request):
+    mapPath = request.GET['mapPath']
+    os.system("python3 ./replay_mission.py ${SPOT_IP} autowalk '"+mapPath+"'")
+    return JsonResponse(loadMap(mapPath))
