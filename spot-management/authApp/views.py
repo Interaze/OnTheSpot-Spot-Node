@@ -57,4 +57,5 @@ def login_view(request):
 
 def run_mission(request):
     mapPath = request.GET['mapPath']
-    os.system("python3 ./replay_mission.py ${SPOT_IP} autowalk '"+mapPath+"'")
+    os.system("python3 ./authApp/replay_mission.py ${SPOT_IP} autowalk '"+mapPath+"'")
+    return JsonResponse({"Hello": "World"})
