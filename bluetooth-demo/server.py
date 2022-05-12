@@ -4,7 +4,7 @@
 import bluetooth
 
 server_sock = bluetooth.BluetoothSocket(bluetooth.L2CAP)
-server_sock.bind(("", 0x8FFF))
+server_sock.bind(("", 0x1001))
 server_sock.listen(1)
 
 while True:

@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  spot-follow:
+  spot-management:
     build:
       dockerfile: Dockerfile
-      context: ./spot-follow
+      context: ./spot-management
     environment: #environment variable to be set on host machine specific to each spot
       - SPOT_ACCOUNT=${SPOT_ACCOUNT}
       - SPOT_PASSWORD=${SPOT_PASSWORD}
