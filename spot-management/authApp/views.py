@@ -12,8 +12,6 @@ from rest_framework.views import APIView
 from rest_framework.authentication import SessionAuthentication
 from rest_framework.response import Response
 
-import replay_mission
-
 from authApp.loadData import loadMap, loadMission
 
 @ensure_csrf_cookie
@@ -60,4 +58,3 @@ def load_mission(request):
 def run_mission(request):
     mapPath = request.GET['mapPath']
     os.system("python3 ./replay_mission.py ${SPOT_IP} autowalk '"+mapPath+"'")
-    return JsonResponse(loadMap(mapPath))
