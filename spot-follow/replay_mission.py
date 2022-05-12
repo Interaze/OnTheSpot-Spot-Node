@@ -188,7 +188,7 @@ def init_robot(hostname):
     robot = sdk.create_robot(hostname)
 
     # Authenticate with robot
-    bosdyn.client.util.authenticate(robot)
+    robot.authenticate("user2", "simplepassword")
 
     # Establish time sync with the robot
     robot.time_sync.wait_for_sync()
