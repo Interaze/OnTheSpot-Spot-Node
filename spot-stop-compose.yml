@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  spot-stop:
+    tty: true
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./spot-stop
+    env_file: 
+      - ./secrets/spot_account.env

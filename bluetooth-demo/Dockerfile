@@ -4,6 +4,11 @@ FROM python:3.6
 WORKDIR /usr/src/app
 # Any instructions for building the container will be based off of this file location in the OS
 
+RUN apt-get update && apt-get install -y \
+  bluez \
+  bluetooth
+# Install deps
+
 COPY requirements.txt ./
 # Copying requirements.txt from our source folder on the HOST (our) machine into the container at this location RELATIVE to the WORKDIR (i.e /usr/src/app/.)
 RUN pip install --no-cache-dir -r requirements.txt

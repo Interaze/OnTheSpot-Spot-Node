@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  bluetooth-demo:
+    build:
+      dockerfile: Dockerfile
+      context: ./bluetooth-demo
+    environment:
+      - FILE=server.py
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    privileged: true
+    network_mode: "host"
