@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from authApp.views import load_map, simple_upload, run_mission
+from authApp.views import load_map, run_mission
 
 urlpatterns = [
     path('run-mission/', load_map, name='Run-Mission'),
-    path('simple-upload/', simple_upload, name='Simple-Upload'),
+    #path('simple-upload/', simple_upload, name='Simple-Upload'),
     path('run-mission/', run_mission, name='Run-Mission'),
     #path('load-mission/', load_mission, name='Load-Mission'),
 #    path('example-view/', views.ExampleView.get, name='Example-View')
