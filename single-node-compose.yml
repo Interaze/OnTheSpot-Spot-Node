@@ -3,7 +3,7 @@ version: '3'
 services:
   spot-management:
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
       context: ./spot-management
     environment: #environment variable to be set on host machine specific to each spot
       - SPOT_ACCOUNT=${SPOT_ACCOUNT}
