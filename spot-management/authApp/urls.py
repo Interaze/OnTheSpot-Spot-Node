@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from authApp.views import load_map, run_mission
+from authApp.views import run_mission
 
 urlpatterns = [
     #path('simple-upload/', simple_upload, name='Simple-Upload'),
